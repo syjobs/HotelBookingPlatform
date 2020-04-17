@@ -28,7 +28,7 @@ public class RoomUController {
             model.addAttribute("catalog",roomService.findCatalogById(catalogId));
             model.addAttribute("roomPage",roomService.pageRoomsByCatalog(catalogId,currentPage,pageSize));
         }
-        return "user/;
+        return "user/roomInfo";
     }
 
 
