@@ -52,6 +52,9 @@
                 <thead>
                 <tr>
                     <th>
+                        入住人
+                    </th>
+                    <th>
                         下单时间
                     </th>
                     <th>
@@ -59,9 +62,6 @@
                     </th>
                     <th>
                         预定天数
-                    </th>
-                    <th>
-                        入住人
                     </th>
                     <th>
                         入住的房间号
@@ -76,6 +76,9 @@
                 <#list reservationList as reservation>
                     <tr>
                         <td>
+                            ${reservation.checkInName}
+                        </td>
+                        <td>
                             ${reservation.orderTime?date}
                         </td>
                         <td>
@@ -83,9 +86,6 @@
                         </td>
                         <td>
                             ${reservation.days}
-                        </td>
-                        <td>
-                            ${reservation.checkInName}
                         </td>
                         <td>
                             <a href="/user/room/detailed?roomNum=${reservation.roomInfo.roomNum}">${reservation.roomInfo.roomNum}</a>

@@ -88,11 +88,11 @@
                     <#assign status="${user.status}"/>
                     <#if status=="1">
                         <td id='td${user.id}'>
-                            正常&nbsp;<a href="javascript:block(${user.id})">锁定</a>
+                            正常&nbsp;<a href="javascript:block(${user.id})">加黑名单</a>
                         </td>
                     <#else>
                         <td id='td${user.id}'>
-                            锁定&nbsp;<a href="javascript:deblock(${user.id})">解锁</a>
+                            加黑名单&nbsp;<a href="javascript:deblock(${user.id})">解除黑名单</a>
                         </td>
                     </#if>
                 </tr>
@@ -108,25 +108,25 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
     function block(userId) {
-        if (confirm("确定锁定该用户？")){
+        if (confirm("确定对该用户加黑名单？")){
             $.getJSON('modifyStatus?userId='+userId+'&status=0',function (json) {
                 if(json){
-                    $('#td'+userId).html('锁定&nbsp;<a href="javascript:block('+userId+')">解锁</a>');
-                    alert('锁定成功');
+                    $('#td'+userId).html('加黑名单&nbsp;<a href="javascript:block('+userId+')">解除黑名单</a>');
+                    alert('加黑名单成功');
                 }else{
-                    alert('锁定失败');
+                    alert('加黑名单失败');
                 }
             })
         }
     }
     function deblock(userId) {
-        if (confirm("确定解锁该用户？")){
+        if (confirm("确定对该用户解除黑名单？")){
             $.getJSON('modifyStatus?userId='+userId+'&status=1',function (json) {
                 if(json){
                     $('#td'+userId).html('正常&nbsp;<a href="javascript:block('+userId+')">锁定</a>');
-                    alert('解锁成功');
+                    alert('解除黑名单成功');
                 }else{
-                    alert('解锁失败');
+                    alert('解除黑名单失败');
                 }
             })
         }

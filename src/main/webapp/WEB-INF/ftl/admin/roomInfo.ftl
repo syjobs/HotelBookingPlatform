@@ -20,10 +20,10 @@
                 <thead>
                 <tr>
                     <th>
-                        房型主图
+                        房间号
                     </th>
                     <th>
-                        房间号
+                        房型主图
                     </th>
                     <th>
                         房型价格
@@ -40,12 +40,12 @@
                 <#list roomPage.queryResultList as roomInfo>
                 <tr id='tr${roomInfo.id}'>
                     <td>
+                        <a href="/super/room/detailedRoomInfo?roomNum=${roomInfo.roomNum}">${roomInfo.roomNum}</a>
+                    </td>
+                    <td>
                         <div class="col-md-12 column">
                             <img alt="140x140" src="/upload/room/primary/${roomInfo.primaryPhoto}" style="height: 140px"/>
                         </div>
-                    </td>
-                    <td>
-                        <a href="/super/room/detailedRoomInfo?roomNum=${roomInfo.roomNum}">${roomInfo.roomNum}</a>
                     </td>
                     <td>
                         ${roomInfo.price}

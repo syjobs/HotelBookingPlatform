@@ -67,10 +67,10 @@
                 <thead>
                 <tr>
                     <th>
-                        房型图片
+                        房型编码
                     </th>
                     <th>
-                        房型编码
+                        房型图片
                     </th>
                     <th>
                         价格
@@ -90,12 +90,12 @@
                 <#list roomPage.queryResultList as room>
                     <tr>
                         <th>
+                            ${room.roomNum}
+                        </th>
+                        <th>
                             <div class="col-md-12 column">
                                 <a href="/user/room/detailed?roomNum=${room.roomNum}"><img alt="140x140" src="/upload/room/primary/${room.primaryPhoto}" style="height: 140px"/></a>
                             </div>
-                        </th>
-                        <th>
-                            ${room.roomNum}
                         </th>
                         <th>
                             ${room.price}
