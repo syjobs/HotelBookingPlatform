@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>添加客房附图</title>
+    <title>添加房型附图</title>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -10,7 +10,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">
-                给客房${roomNum}添加附图
+                给房型${roomNum}添加附图
             </h3>
             <br/>
             <label style="color: red">${hint}</label>

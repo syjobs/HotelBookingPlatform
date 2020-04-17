@@ -7,12 +7,12 @@ import java.util.List;
 /**
  * @author sunyang
  * @date 2019/12/3
- * 客房类别-数据持久化接口
+ * 房型类别-数据持久化接口
  */
 public interface RoomCatalogMapper {
 
     /**
-     * 增加客房类型
+     * 增加酒店
      *
      * @param roomCatalog
      * @return
@@ -28,7 +28,7 @@ public interface RoomCatalogMapper {
     int delete(Integer id);
 
     /**
-     * 根据类型名称查询客房类型
+     * 根据类型名称查询酒店
      *
      * @param catalog
      * @return
@@ -36,7 +36,7 @@ public interface RoomCatalogMapper {
     RoomCatalog selectByCatalogName(String catalog);
 
     /**
-     * 根据id查询客房类型
+     * 根据id查询酒店
      *
      * @param id
      * @return
@@ -44,7 +44,7 @@ public interface RoomCatalogMapper {
     RoomCatalog selectById(Integer id);
 
     /**
-     * 查找所有客房类型
+     * 查找所有酒店
      *
      * @return
      */

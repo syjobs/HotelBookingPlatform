@@ -8,18 +8,19 @@
 <body>
 <div class="container">
     <div class="row clearfix">
-        <div class="col-md-12 column">
+        <div class="col-md-12 column" style="margin-top: 15px;">
             <ul class="nav nav-pills">
-                <li>
-                    <a href="/toIndex">首页</a>
-                </li>
-                <li>
-                    <a href="/user/room/showRoomByCatalog">酒店信息</a>
+                <li class="dropdown pull-left">
+                    <p>
+                        <a href="/toIndex">首页</a>&nbsp;
+
+                        <a href="/user/room/showRoomByCatalog">酒店信息</a>
+                    </p>
                 </li>
                 <li class="dropdown pull-right">
                     <p>
                     <#if user!=null>
-                        <a href="/user/toInformation">${user.realName}</a>
+                        欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">个人中心</a>
                         &nbsp;&nbsp;
                         <a href="/user/reservation/showByUser">订单管理</a>
                         &nbsp;&nbsp;
@@ -37,7 +38,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">
-                房型编号<label style="color: red">${room.roomNum}</label>的详细信息
+                房型编号<label style="color: red">${room.roomNum}</label>详情信息
             </h3>
         </div>
     </div>
@@ -64,6 +65,9 @@
                     <th>
                         房型状态
                     </th>
+                    <th>
+                        操作
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -72,7 +76,7 @@
                         ${room.roomNum}
                     </td>
                     <td>
-                        ${room.area}
+                        ${room.area}m²
                     </td>
                     <td>
                         ${room.price}
@@ -86,37 +90,39 @@
                     <td>
                         ${room.roomStatus.status}
                     </td>
+                    <td>
+                        <#if room.roomStatus.status=="空闲">
+<#--                            <button>-->
+                                <a href="/user/reservation/order?roomNum=${room.roomNum}">预订</a>
+<#--                            </button>-->
+                        <#else>
+                            <p style="color: #1fa55f;">暂时无法预订</p>
+                        </#if>
+                    </td>
                 </tr>
                 </tbody>
             </table>
             <br/>
 <#--            <button><a href="/user/comment/showByRoom?roomNum=${room.roomNum}">评论信息</a> </button>-->
-            <#if room.roomStatus.status=="空闲">
-                <button><a href="/user/reservation/order?roomNum=${room.roomNum}">预订</a> </button>
-            <#else>
-                <p style="color: red;">暂时无法预订</p>
-            </#if>
+
             <ul>
-                <li>
-                    房型主图
-                </li>
-                <li>
+<#--                    房型主图-->
                     <div class="col-md-12 column">
-                        <img alt="140x140" src="/upload/room/primary/${room.primaryPhoto}" style="height: 140px"/>
+                        <img alt="300x300" src="/upload/room/primary/${room.primaryPhoto}" style="height: 300px"/>
                     </div>
-                </li>
-                <li>
-                    房型附图
-                </li>
+<#--                    房型附图-->
+                    <br>
                 <#list roomPhotoList as roomPhoto>
-                    <li id="li${roomPhoto.id}">
+<#--                    <li id="li${roomPhoto.id}">-->
                         <div class="col-md-12 column">
-                            <img alt="140x140" src="/upload/room/subjoin/${roomPhoto.photoPath}" style="height: 140px"/>
+                            <img alt="300x300" src="/upload/room/subjoin/${roomPhoto.photoPath}" style="height: 300px"/>
                         </div>
-                    </li>
+<#--                    </li>-->
                     <br/>
                 </#list>
             </ul>
+
+
         </div>
     </div>
 </div>

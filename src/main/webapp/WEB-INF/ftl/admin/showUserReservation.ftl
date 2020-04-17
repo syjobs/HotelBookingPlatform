@@ -10,7 +10,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">
-                根据客房编号或客户昵称查询预订订单
+                根据房型编号或客户昵称查询预订订单
             </h3>
             <br/>
             <label style="color: red">${hint}</label>

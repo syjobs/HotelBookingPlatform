@@ -20,11 +20,11 @@ public class RoomInfo implements Serializable{
     private String primaryPhoto;
     //房间简介
     private String intro;
-    //客房价格
+    //房型价格
     private Double price;
-    //客房类别
+    //酒店
     private RoomCatalog roomCatalog;
-    //客房状态
+    //房型状态
     private RoomStatus roomStatus;
     //版本控制
     private Long version;

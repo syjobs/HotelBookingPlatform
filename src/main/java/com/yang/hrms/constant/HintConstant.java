@@ -23,7 +23,7 @@ public final class HintConstant {
     public final static String ROOMNUM_VALID = "房间号可用！";
     public final static String NO_RESERVATION = "该用户没有预定订单！";
     public final static String ORDER_FAILED_NO_ROOM = "预定失败，请核对是否有该酒店！";
-    public final static String ORDER_FAILED_STATUS = "预定失败，请核对客房状态是否可预订！";
+    public final static String ORDER_FAILED_STATUS = "预定失败，请核对房型状态是否可预订！";
     public final static String CANCEL_FAILED = "取消订单失败";
     public final static String NO_USER = "没有该信息的用户";
 }

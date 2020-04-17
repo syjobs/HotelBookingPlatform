@@ -7,7 +7,7 @@ import java.util.Date;
  * @author sunyang
  * @date 2019/12/4
  * 评论信息表
- * 主要记录了用户对已住过的客房的评论
+ * 主要记录了用户对已住过的房型的评论
  */
 public class Comment implements Serializable{
     //主键id

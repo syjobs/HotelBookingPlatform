@@ -27,14 +27,14 @@ public interface RoomInfoMapper {
     int deleteByRoomNum(String roomNum);
 
     /**
-     * 修改某间客房的信息
+     * 修改某间房型的信息
      * @param roomInfo
      * @return
      */
     int update(RoomInfo roomInfo);
 
     /**
-     * 改变客房状态
+     * 改变房型状态
      * @param room
      * @return
      */
@@ -48,7 +48,7 @@ public interface RoomInfoMapper {
     RoomInfo selectByNum(String num);
 
     /**
-     * 查询所有客房的总数
+     * 查询所有房型的总数
      * @return
      */
     int count();
@@ -63,14 +63,14 @@ public interface RoomInfoMapper {
                         @Param("pageSize") Integer pageSize);
 
     /**
-     * 根据客房类型id计数客房数量
+     * 根据酒店id计数房型数量
      * @param id
      * @return
      */
     int countByRoomCatalogId(Integer id);
 
     /**
-     * 根据客房类型id分页查询客房
+     * 根据酒店id分页查询房型
      * @param roomCatalogId
      * @param offset
      * @param pageSize

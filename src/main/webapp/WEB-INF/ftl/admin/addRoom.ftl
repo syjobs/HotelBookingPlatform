@@ -10,7 +10,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">
-                添加<label style="color: red">${catalog.catalog}</label>的客房
+                添加<label style="color: red">${catalog.catalog}</label>的房型
             </h3>
             <br/>
             <label style="color: red">${hint}</label>

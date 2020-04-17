@@ -8,19 +8,19 @@
 <body>
 <div class="container">
     <div class="row clearfix">
-        <div class="col-md-12 column">
+        <div class="col-md-12 column" style="margin-top: 15px;">
             <ul class="nav nav-pills">
-<#--                <li class="active">-->
-                <li>
-                    <a href="/toIndex">首页</a>
-                </li>
-                <li>
-                    <a href="/user/room/showRoomByCatalog">酒店信息</a>
+                <li class="dropdown pull-left">
+                    <p>
+                        <a href="/toIndex">首页</a>&nbsp;
+
+                        <a href="/user/room/showRoomByCatalog">酒店信息</a>
+                    </p>
                 </li>
                 <li class="dropdown pull-right">
                     <p>
                         <#if user!=null>
-                            <a href="/user/toInformation">${user.realName}</a>
+                            欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">个人中心</a>
                             &nbsp;&nbsp;
                             <a href="/user/reservation/showByUser">订单管理</a>
                             &nbsp;&nbsp;
@@ -47,30 +47,48 @@
     </div>
     <div class="row clearfix">
         <div class="col-md-6 column">
-            <img alt="140x140" src="/upload/room/primary/${room0.primaryPhoto}" style="height: 140px"/>
+            ${room0.roomCatalog.catalog}</br>
+            <a href="/user/room/detailed?roomNum=${room0.roomNum}">
+                <img alt="200x200" src="/upload/room/primary/${room0.primaryPhoto}" style="height: 200px"/>
+            </a>
             <#--<a href="/user/room/detailed?roomNum?roomNum=${room0.roomNum}">${room0.roomNum}</a>
             &nbsp;&nbsp;${room0.roomStatus.status}-->
         </div>
         <div class="col-md-6 column">
-            <img alt="140x140" src="/upload/room/primary/${room1.primaryPhoto}" style="height: 140px"/>
+            ${room1.roomCatalog.catalog}</br>
+            <a href="/user/room/detailed?roomNum=${room1.roomNum}">
+                <img alt="200x200" src="/upload/room/primary/${room1.primaryPhoto}" style="height: 200px"/>
+            </a>
         </div>
     </div>
     <br/>
     <div class="row clearfix">
         <div class="col-md-6 column">
-            <img alt="140x140" src="/upload/room/primary/${room2.primaryPhoto}" style="height: 140px"/>
+            ${room2.roomCatalog.catalog}</br>
+            <a href="/user/room/detailed?roomNum=${room2.roomNum}">
+                <img alt="200x200" src="/upload/room/primary/${room2.primaryPhoto}" style="height: 200px"/>
+            </a>
         </div>
         <div class="col-md-6 column">
-            <img alt="140x140" src="/upload/room/primary/${room3.primaryPhoto}" style="height: 140px"/>
+            ${room3.roomCatalog.catalog}</br>
+            <a href="/user/room/detailed?roomNum=${room3.roomNum}">
+                <img alt="200x200" src="/upload/room/primary/${room3.primaryPhoto}" style="height: 200px"/>
+            </a>
         </div>
     </div>
     <br/>
     <div class="row clearfix">
         <div class="col-md-6 column">
-            <img alt="140x140" src="/upload/room/primary/${room4.primaryPhoto}" style="height: 140px"/>
+            ${room4.roomCatalog.catalog}</br>
+            <a href="/user/room/detailed?roomNum=${room4.roomNum}">
+                <img alt="200x200" src="/upload/room/primary/${room4.primaryPhoto}" style="height: 200px"/>
+            </a>
         </div>
         <div class="col-md-6 column">
-            <img alt="140x140" src="/upload/room/primary/${room5.primaryPhoto}" style="height: 140px"/>
+            ${room5.roomCatalog.catalog}</br>
+            <a href="/user/room/detailed?roomNum=${room5.roomNum}">
+                <img alt="200x200" src="/upload/room/primary/${room5.primaryPhoto}" style="height: 200px"/>
+            </a>
         </div>
     </div>
     <br/>

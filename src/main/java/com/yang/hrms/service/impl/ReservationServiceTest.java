@@ -42,7 +42,7 @@ public class ReservationServiceTest implements ReservationService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public boolean saveReservation(Reservation reservation) {
-        //订单状态：预订成功 -- 客房状态：已被预订
+        //订单状态：预订成功 -- 房型状态：已被预订
         reservation.setReservationStatus(ReservationStatus.ORDERED);
         RoomInfo room = reservation.getRoomInfo();
         room.setRoomStatus(RoomStatus.BLOCKS);
@@ -61,7 +61,7 @@ public class ReservationServiceTest implements ReservationService {
         Reservation reservation = reservationMapper.findById(reservationId);
         if (reservation != null) {
             reservation.setReservationStatus(status);
-            //订单状态：已取消 -- 客房状态：空闲
+            //订单状态：已取消 -- 房型状态：空闲
             if (status.getStatus().equals(ReservationStatus.REVOKING.getStatus())) {
                 reservation.setReservationStatus(status);
                 RoomInfo room = reservation.getRoomInfo();
@@ -70,7 +70,7 @@ public class ReservationServiceTest implements ReservationService {
                     reservationMapper.updateStatus(reservation);
                 }
             }
-            //订单状态:已退房 -- 客房状态：空闲
+            //订单状态:已退房 -- 房型状态：空闲
             else if (status.getStatus().equals(ReservationStatus.CLEARED.getStatus())) {
                 Admin admin = adminMapper.findById(adminId);
                 if (admin != null) {
@@ -87,7 +87,7 @@ public class ReservationServiceTest implements ReservationService {
                     }
                 }
             }
-            //订单状态：已办理入住 -- 客房状态：已被入住
+            //订单状态：已办理入住 -- 房型状态：已被入住
             else if (status.getStatus().equals(ReservationStatus.PROCESSED.getStatus())) {
                 reservation.setReservationStatus(status);
                 RoomInfo room = reservation.getRoomInfo();

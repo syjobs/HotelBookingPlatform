@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * @author sunyang
  * @date 2019/12/5
- * 酒店客房预订单的处理情况
+ * 酒店房型预订单的处理情况
  */
 public enum ReservationStatus implements Serializable{
     REVOKING("已取消"),

@@ -14,7 +14,7 @@ import java.sql.SQLException;
 /**
  * @author sunyang
  * @date 2018/1/8
- * 客房状态-数据库 转换器
+ * 房型状态-数据库 转换器
  */
 @MappedJdbcTypes(JdbcType.TINYINT)
 @MappedTypes(RoomStatus.class)

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>客房详细信息</title>
+    <title>房型详细信息</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -10,7 +10,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">
-                这是客房编号<label style="color: red">${room.roomNum}</label>的详细信息
+                房型编号<label style="color: red">${room.roomNum}</label>详情信息
             </h3>
         </div>
     </div>
@@ -20,7 +20,7 @@
                 <thead>
                 <tr>
                     <th>
-                        客房编号
+                        房型编号
                     </th>
                     <th>
                         面积
@@ -29,13 +29,13 @@
                         价格
                     </th>
                     <th>
-                        简介
+                        床型
                     </th>
                     <th>
-                        客房类型
+                        酒店名称
                     </th>
                     <th>
-                        客房状态
+                        房型状态
                     </th>
                 </tr>
                 </thead>
@@ -45,7 +45,7 @@
                         ${room.roomNum}
                     </td>
                     <td>
-                        ${room.area}
+                        ${room.area}m²
                     </td>
                     <td>
                         ${room.price}
@@ -64,24 +64,19 @@
             </table>
             <br/>
             <ul>
-                <li>
-                    客房主图
-                </li>
-                <li>
-                    <div class="col-md-12 column">
-                        <img alt="140x140" src="/upload/room/primary/${room.primaryPhoto}" style="height: 140px"/>
-                    </div>
-                </li>
-                <li>
-                    客房附图
-                </li>
+                <#--                    房型主图-->
+                <div class="col-md-12 column">
+                    <img alt="300x300" src="/upload/room/primary/${room.primaryPhoto}" style="height: 300px"/>
+                </div>
+                <#--                    房型附图-->
+                <br>
                 <#list roomPhotoList as roomPhoto>
-                    <li id="li${roomPhoto.id}">
-                        <div class="col-md-12 column">
-                            <img alt="140x140" src="/upload/room/subjoin/${roomPhoto.photoPath}" style="height: 140px"/>
-                        </div>
-                        <a href="javascript:deleteOnePhoto(${roomPhoto.photoId})">删除</a>
-                    </li>
+                <#--                    <li id="li${roomPhoto.id}">-->
+                    <div class="col-md-12 column">
+                        <img alt="300x300" src="/upload/room/subjoin/${roomPhoto.photoPath}" style="height: 300px"/>
+                    </div>
+                <#--                    </li>-->
+                    <br/>
                 </#list>
             </ul>
             <br/>
@@ -89,7 +84,7 @@
             &nbsp;&nbsp;
             <a href="/super/room/toAddPhoto?roomNum=${room.roomNum}">添加附图</a>
             &nbsp;&nbsp;
-            <a href="/super/room/comment/doShowCommentByRoom?roomNum=${room.roomNum}">查看该客房的评论</a>
+<#--            <a href="/super/room/comment/doShowCommentByRoom?roomNum=${room.roomNum}">查看该房型的评论</a>-->
         </div>
     </div>
 </div>

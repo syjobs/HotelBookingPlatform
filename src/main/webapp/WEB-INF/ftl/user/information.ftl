@@ -8,18 +8,19 @@
 <body>
 <div class="container">
     <div class="row clearfix">
-        <div class="col-md-12 column">
+        <div class="col-md-12 column" style="margin-top: 15px;">
             <ul class="nav nav-pills">
-                <li>
-                    <a href="/toIndex">首页</a>
-                </li>
-                <li>
-                    <a href="/user/room/showRoomByCatalog">酒店信息</a>
+                <li class="dropdown pull-left">
+                    <p>
+                        <a href="/toIndex">首页</a>&nbsp;
+
+                        <a href="/user/room/showRoomByCatalog">酒店信息</a>
+                    </p>
                 </li>
                 <li class="dropdown pull-right">
                     <p>
                     <#if user!=null>
-                        <a href="/user/toInformation">${user.realName}</a>
+                        欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">个人中心</a>
                         &nbsp;&nbsp;
                         <a href="/user/reservation/showByUser">订单管理</a>
                         &nbsp;&nbsp;
@@ -37,7 +38,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">
-                欢迎<label style="color: red">${user.realName}</label>，以下是您的详细个人信息
+                <label style="color: red">${user.realName}</label>，以下是您的详细个人信息
             </h3>
         </div>
     </div>

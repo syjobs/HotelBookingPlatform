@@ -4,7 +4,7 @@
 <!-- 命名空间-对应相应的接口 -->
 <mapper namespace="com.yang.hrms.mapper.RoomInfoMapper">
 	
-	<!-- 客房类型 外键映射 -->
+	<!-- 酒店 外键映射 -->
 	<resultMap id="roomCatalogResultMap" type="roomCatalog" >
 		<id property="id" column="room_catalog_id" />
 		<result property="catalog" column="catalog" />

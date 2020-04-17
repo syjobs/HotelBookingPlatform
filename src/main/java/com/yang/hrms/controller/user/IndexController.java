@@ -1,5 +1,6 @@
 package com.yang.hrms.controller.user;
 
+import com.yang.hrms.domain.RoomCatalog;
 import com.yang.hrms.domain.RoomInfo;
 import com.yang.hrms.service.PromotionService;
 import com.yang.hrms.service.RoomInfoService;
@@ -20,6 +21,8 @@ public class IndexController {
     private PromotionService promotionService;
     @Autowired
     private RoomInfoService roomInfoService;
+    @Autowired
+    private RoomInfoService roomService;
 
     @GetMapping(value = {"toIndex", "/"})
     public String toIndex(Model model) {
@@ -27,7 +30,10 @@ public class IndexController {
         List<RoomInfo> roomInfoList = roomInfoService.getSomeForIndex();
         if (null!=roomInfoList && !roomInfoList.isEmpty()) {
             for (int i = 0; i < roomInfoList.size(); i++) {
-                model.addAttribute("room" + i, roomInfoList.get(i));
+                RoomInfo roomInfo = roomInfoList.get(i);
+                RoomCatalog catalog = roomService.findCatalogById(roomInfo.getRoomCatalog().getId());
+                roomInfo.getRoomCatalog().setCatalog(catalog.getCatalog());
+                model.addAttribute("room" + i, roomInfo);
             }
         }
         return "user/index";

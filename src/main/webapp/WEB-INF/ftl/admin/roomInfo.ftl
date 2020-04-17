@@ -20,16 +20,16 @@
                 <thead>
                 <tr>
                     <th>
-                        客房主图
+                        房型主图
                     </th>
                     <th>
                         房间号
                     </th>
                     <th>
-                        客房价格
+                        房型价格
                     </th>
                     <th>
-                        客房状态
+                        房型状态
                     </th>
                     <th>
                         操作
@@ -93,7 +93,7 @@
                 <br/>
                 <a href="/super/toSuper">返回上一页</a>
                 &nbsp;&nbsp;
-                <a href="/super/room/toAddRoom">添加客房</a>
+                <a href="/super/room/toAddRoom">添加房型</a>
         </div>
     </div>
 </div>

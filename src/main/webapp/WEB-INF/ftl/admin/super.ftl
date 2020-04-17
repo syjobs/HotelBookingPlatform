@@ -47,7 +47,7 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
      function deleteCatalog(id) {
-         if (confirm("确定删除该类型的客房吗？")){
+         if (confirm("确定删除该类型的房型吗？")){
              $.getJSON('/super/room/doDeleteCatalog?catalogId='+id,function (json) {
                  if(json.flag){
                      $('#li'+id).remove();

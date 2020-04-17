@@ -7,12 +7,12 @@ import java.util.List;
 /**
  * @author sunyang
  * @date 2019/12/3
- * 客房图片-数据持久化接口
+ * 房型图片-数据持久化接口
  */
 public interface RoomPhotoMapper {
 
     /**
-     * 保存一张客房图片
+     * 保存一张房型图片
      * @param roomPhoto
      * @return
      */

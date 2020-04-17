@@ -5,14 +5,14 @@ import java.io.Serializable;
 /**
  * @author sunyang
  * @date 2019/12/1
- * 客房的展示图片
+ * 房型的展示图片
  */
 public class RoomPhoto implements Serializable{
     //主键id
     private Integer id;
-    //客房图片路径
+    //房型图片路径
     private String photoPath;
-    //对应的客房
+    //对应的房型
     private RoomInfo roomInfo;
 
     public RoomPhoto() {
