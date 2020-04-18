@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>${userRealName}个人信息</title>
+    <title>酒店管理系统-${userRealName}个人信息</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -22,9 +22,9 @@
                     <#if user!=null>
                         欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">个人中心</a>
                         &nbsp;&nbsp;
-                        <a href="/user/reservation/showByUser">订单管理</a>
+                        <a href="/user/reservation/showByUser">我的订单</a>
                         &nbsp;&nbsp;
-                        <a href="/user/doLogout">注销</a>
+                        <a href="/user/doLogout">退出</a>
                     <#else>
                         <a href="/user/toLogin">登录</a>
                         &nbsp;&nbsp;
