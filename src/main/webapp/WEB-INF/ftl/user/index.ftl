@@ -106,10 +106,10 @@
                 <thead>
                 <tr>
                     <th>
-                        活动标题
+                        主题
                     </th>
                     <th>
-                        活动内容<span style="color: red">（最新促销信息）</span>
+                        内容<span style="color: red">（最新促销信息）</span>
                     </th>
                     <th>
                         发布时间

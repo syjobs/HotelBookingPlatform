@@ -23,13 +23,13 @@
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         <sqlMapGenerator targetPackage="mapper"
-                         targetProject="E:\HotelBookingPlatform\src\main\resources\mapper">
+                         targetProject="E:\HotelBookingPlatform\src\main\resources\">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="dao"
-                             targetProject="E:\HotelBookingPlatform\src\main\java\com\sy\hotel\mapper">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="mapper"
+                             targetProject="E:\HotelBookingPlatform\src\main\java\com\sy\hotel\">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
-        <table tableName="tb_user" domainObjectName="TBUser"/>
+        <table tableName="tb_admin" domainObjectName="TBAdmin"/>
     </context>
 </generatorConfiguration>
