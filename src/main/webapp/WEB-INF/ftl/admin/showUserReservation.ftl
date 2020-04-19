@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>酒店管理系统-查询预订订单</title>
+    <title>HU酒店在线预定平台-查询预订订单</title>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>

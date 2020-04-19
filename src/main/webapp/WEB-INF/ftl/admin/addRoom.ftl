@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>酒店管理系统-注册</title>
+    <title>HU酒店在线预定平台-注册</title>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">简介</label>
+                    <label class="col-sm-2 control-label">床型</label>
                     <label id="isRePasswordValid"></label>
                     <div class="col-sm-10">
                         <input required type="text" class="form-control" name="intro" id="intro"/>

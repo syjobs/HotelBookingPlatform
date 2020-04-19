@@ -41,7 +41,7 @@ CREATE TABLE `tb_room_catalog` (
   UNIQUE KEY `catalog` (`catalog`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 酒店信息实体表
+-- 床型类别实体表
 DROP TABLE IF EXISTS `tb_room_info`;
 CREATE TABLE `tb_room_info` (
   `room_info_id` int(11) NOT NULL AUTO_INCREMENT,

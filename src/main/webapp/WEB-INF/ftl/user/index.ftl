@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>酒店管理系统-首页</title>
+    <title>HU酒店在线预定平台-首页</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +14,7 @@
                     <p>
                         <a href="/toIndex">首页</a>&nbsp;
 
-                        <a href="/user/room/showRoomByCatalog">酒店信息</a>
+                        <a href="/user/room/showRoomByCatalog">预订客房</a>
                     </p>
                 </li>
                 <li class="dropdown pull-right">
@@ -40,66 +40,66 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h1 class="text-center">
-                酒店管理系统
+                欢迎进入HU酒店在线预定平台
             </h1>
             <br/>
         </div>
     </div>
-    <div class="row clearfix">
-        <div class="col-md-6 column">
-            ${room0.roomCatalog.catalog}</br>
-            <a href="/user/room/detailed?roomNum=${room0.roomNum}">
-                <img alt="200x200" src="/upload/room/primary/${room0.primaryPhoto}" style="height: 200px"/>
-            </a>
-            <#--<a href="/user/room/detailed?roomNum?roomNum=${room0.roomNum}">${room0.roomNum}</a>
-            &nbsp;&nbsp;${room0.roomStatus.status}-->
-        </div>
-        <div class="col-md-6 column">
-            ${room1.roomCatalog.catalog}</br>
-            <a href="/user/room/detailed?roomNum=${room1.roomNum}">
-                <img alt="200x200" src="/upload/room/primary/${room1.primaryPhoto}" style="height: 200px"/>
-            </a>
-        </div>
-    </div>
+<#--    <div class="row clearfix">-->
+<#--        <div class="col-md-6 column">-->
+<#--            ${room0.roomCatalog.catalog}</br>-->
+<#--            <a href="/user/room/detailed?roomNum=${room0.roomNum}">-->
+<#--                <img alt="200x200" src="/upload/room/primary/${room0.primaryPhoto}" style="height: 200px"/>-->
+<#--            </a>-->
+<#--            &lt;#&ndash;<a href="/user/room/detailed?roomNum?roomNum=${room0.roomNum}">${room0.roomNum}</a>-->
+<#--            &nbsp;&nbsp;${room0.roomStatus.status}&ndash;&gt;-->
+<#--        </div>-->
+<#--        <div class="col-md-6 column">-->
+<#--            ${room1.roomCatalog.catalog}</br>-->
+<#--            <a href="/user/room/detailed?roomNum=${room1.roomNum}">-->
+<#--                <img alt="200x200" src="/upload/room/primary/${room1.primaryPhoto}" style="height: 200px"/>-->
+<#--            </a>-->
+<#--        </div>-->
+<#--    </div>-->
+<#--    <br/>-->
+<#--    <div class="row clearfix">-->
+<#--        <div class="col-md-6 column">-->
+<#--            ${room2.roomCatalog.catalog}</br>-->
+<#--            <a href="/user/room/detailed?roomNum=${room2.roomNum}">-->
+<#--                <img alt="200x200" src="/upload/room/primary/${room2.primaryPhoto}" style="height: 200px"/>-->
+<#--            </a>-->
+<#--        </div>-->
+<#--        <div class="col-md-6 column">-->
+<#--            ${room3.roomCatalog.catalog}</br>-->
+<#--            <a href="/user/room/detailed?roomNum=${room3.roomNum}">-->
+<#--                <img alt="200x200" src="/upload/room/primary/${room3.primaryPhoto}" style="height: 200px"/>-->
+<#--            </a>-->
+<#--        </div>-->
+<#--    </div>-->
+<#--    <br/>-->
+<#--    <div class="row clearfix">-->
+<#--        <div class="col-md-6 column">-->
+<#--            ${room4.roomCatalog.catalog}</br>-->
+<#--            <a href="/user/room/detailed?roomNum=${room4.roomNum}">-->
+<#--                <img alt="200x200" src="/upload/room/primary/${room4.primaryPhoto}" style="height: 200px"/>-->
+<#--            </a>-->
+<#--        </div>-->
+<#--        <div class="col-md-6 column">-->
+<#--            ${room5.roomCatalog.catalog}</br>-->
+<#--            <a href="/user/room/detailed?roomNum=${room5.roomNum}">-->
+<#--                <img alt="200x200" src="/upload/room/primary/${room5.primaryPhoto}" style="height: 200px"/>-->
+<#--            </a>-->
+<#--        </div>-->
+<#--    </div>-->
     <br/>
-    <div class="row clearfix">
-        <div class="col-md-6 column">
-            ${room2.roomCatalog.catalog}</br>
-            <a href="/user/room/detailed?roomNum=${room2.roomNum}">
-                <img alt="200x200" src="/upload/room/primary/${room2.primaryPhoto}" style="height: 200px"/>
-            </a>
-        </div>
-        <div class="col-md-6 column">
-            ${room3.roomCatalog.catalog}</br>
-            <a href="/user/room/detailed?roomNum=${room3.roomNum}">
-                <img alt="200x200" src="/upload/room/primary/${room3.primaryPhoto}" style="height: 200px"/>
-            </a>
-        </div>
-    </div>
-    <br/>
-    <div class="row clearfix">
-        <div class="col-md-6 column">
-            ${room4.roomCatalog.catalog}</br>
-            <a href="/user/room/detailed?roomNum=${room4.roomNum}">
-                <img alt="200x200" src="/upload/room/primary/${room4.primaryPhoto}" style="height: 200px"/>
-            </a>
-        </div>
-        <div class="col-md-6 column">
-            ${room5.roomCatalog.catalog}</br>
-            <a href="/user/room/detailed?roomNum=${room5.roomNum}">
-                <img alt="200x200" src="/upload/room/primary/${room5.primaryPhoto}" style="height: 200px"/>
-            </a>
-        </div>
-    </div>
-    <br/>
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <h3 class="text-center">
-                最新活动消息
-            </h3>
-            <br/>
-        </div>
-    </div>
+<#--    <div class="row clearfix">-->
+<#--        <div class="col-md-12 column">-->
+<#--            <h3 class="text-center">-->
+<#--                最新活动消息-->
+<#--            </h3>-->
+<#--            <br/>-->
+<#--        </div>-->
+<#--    </div>-->
     <div class="row clearfix">
         <div class="col-md-12 column">
             <table class="table">
@@ -109,7 +109,7 @@
                         活动标题
                     </th>
                     <th>
-                        活动内容
+                        活动内容<span style="color: red">（最新活动信息）</span>
                     </th>
                     <th>
                         发布时间

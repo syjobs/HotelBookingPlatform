@@ -33,7 +33,7 @@ public interface RoomPhotoMapper {
     int deleteByRoomId(Integer roomId);
 
     /**
-     * 根据酒店信息id查看其图片展示
+     * 根据床型类别id查看其图片展示
      * @param id
      * @return
      */

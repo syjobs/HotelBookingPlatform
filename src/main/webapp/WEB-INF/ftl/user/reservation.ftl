@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>酒店管理系统-历史订单</title>
+    <title>HU酒店在线预定平台-历史订单</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +14,7 @@
                     <p>
                         <a href="/toIndex">首页</a>&nbsp;
 
-                        <a href="/user/room/showRoomByCatalog">酒店信息</a>
+                        <a href="/user/room/showRoomByCatalog">预订客房</a>
                     </p>
                 </li>
                 <li class="dropdown pull-right">

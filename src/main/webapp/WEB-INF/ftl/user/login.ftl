@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>酒店管理系统-登陆</title>
+    <title>HU酒店在线预定平台-登陆</title>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <div class="col-md-12 column">
             <a href="/toIndex">进入首页</a>
             <h3 class="text-center">
-                酒店管理系统-登录
+                HU酒店在线预定平台-登录
             </h3>
             <br/>
             <label style="color: red">${hint}</label>

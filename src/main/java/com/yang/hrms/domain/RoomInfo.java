@@ -18,7 +18,7 @@ public class RoomInfo implements Serializable{
     private Integer area;
     //酒店主图
     private String primaryPhoto;
-    //房间简介
+    //房间床型
     private String intro;
     //房型价格
     private Double price;

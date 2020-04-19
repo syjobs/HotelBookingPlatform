@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>酒店管理系统-超级管理员</title>
+    <title>HU酒店在线预定平台-超级管理员</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -18,14 +18,14 @@
         <div class="col-md-12 column">
             <ul>
                 <li>
-                    <h4><a href="/super/doShowAllAdmin">管理员操作</a></h4>
+                    <h4><a href="/super/doShowAllAdmin">普通管理员管理</a></h4>
                 </li>
                 <li>
-                    <h4><a href="/super/user/all">用户管理</a></h4>
+                    <h4><a href="/super/user/all">前台用户管理</a></h4>
                 </li>
                 <li>
-                    <h4>[酒店-房型管理]</h4>
-                    <a href="/super/room/toAddCatalog">添加酒店</a>
+                    <h4>床型类别管理</h4>
+                    <a href="/super/room/toAddCatalog">添加床型</a>
                     <ul>
                         <#list catalogList as catalog>
                             <li id="li${catalog.id}">
@@ -36,7 +36,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/super/promotion/doShowPromotion">活动管理</a>
+                    <a href="/super/promotion/doShowPromotion">活动发布管理</a>
                 </li>
             </ul>
         </div>
