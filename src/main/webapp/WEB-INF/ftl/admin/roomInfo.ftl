@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预定平台-床型类别</title>
+    <title>HU酒店在线预订平台-床型类别</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -20,7 +20,7 @@
                 <thead>
                 <tr>
                     <th>
-                        房间号
+                        房型名称
                     </th>
                     <th>
                         房型主图

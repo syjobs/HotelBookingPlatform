@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 命名空间-对应相应的接口 -->
-<mapper namespace="com.yang.hrms.mapper.PromotionMapper">
+<mapper namespace="com.sy.hotel.mapper.PromotionMapper">
 	
 	<!-- 配置实体类与数据库表的对应关系 -->
 	<resultMap id="promotionResultMap" type="promotion" >

@@ -11,7 +11,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="hrms" />
+          <element id="module-output" name="HotelBookingPlatform" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.4.5" />
@@ -47,7 +47,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/hrms-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="hrms/web/Web" />
+      <element id="javaee-facet-resources" facet="HotelBookingPlatform/web/Web" />
     </root>
   </artifact>
 </component>

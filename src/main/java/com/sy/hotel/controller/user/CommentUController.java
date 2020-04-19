@@ -1,0 +1,60 @@
+package com.sy.hotel.controller.user;
+
+import com.sy.hotel.domain.Comment;
+import com.sy.hotel.domain.RoomInfo;
+import com.sy.hotel.domain.User;
+import com.sy.hotel.service.CommentService;
+import com.sy.hotel.service.RoomInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.Date;
+
+/**
+ * @author sunyang
+ * @date 2018/5/22
+ */
+@Controller
+@RequestMapping("/user/comment")
+public class CommentUController {
+
+    @Autowired
+    private CommentService commentService;
+    @Autowired
+    private RoomInfoService roomService;
+
+    @GetMapping("/showByRoom")
+    public String showByRoom(String roomNum, Integer currentPage, Integer pageSize, Model model) {
+        String viewName = "user/comment";
+        if (roomNum != null) {
+            RoomInfo room = roomService.findRoomByRoomNum(roomNum);
+            model.addAttribute("commentPage", commentService.pageComment(room, currentPage, pageSize));
+            model.addAttribute("room", room);
+        }
+        return viewName;
+    }
+
+    @GetMapping("/toPublish")
+    public String toPublish(String roomNum,Model model){
+        model.addAttribute("roomNum",roomNum);
+        return "/user/publishComment";
+    }
+
+    @PostMapping("/publish")
+    public String publish(Comment comment, String roomNum, HttpSession session) throws UnsupportedEncodingException {
+        User user= (User) session.getAttribute("user");
+        RoomInfo room=roomService.findRoomByRoomNum(roomNum);
+        comment.setPubDate(new Date());
+        comment.setUser(user);
+        comment.setRoomInfo(room);
+        commentService.add(comment);
+        return "redirect:showByRoom?roomNum="+ URLEncoder.encode(roomNum,"utf-8");
+    }
+}

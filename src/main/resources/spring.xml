@@ -14,7 +14,7 @@
         http://www.springframework.org/schema/tx/spring-tx.xsd">
     <!-- 配置扫描哪个包及其子包来发现需要纳入Spring IoC容器管理的对象 -->
     <!-- Spring扫包（将打了@Repository，@Service注解的类纳入IoC容器进行管理） -->
-    <context:component-scan base-package="com.yang.hrms">
+    <context:component-scan base-package="com.sy.hotel">
         <!-- 排除掉控制层 -->
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
         <context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
@@ -22,7 +22,7 @@
     <context:annotation-config/>
     <!-- 配置属性占位符的处理对象 该对象可以读取指定的配置文件获取参数 -->
     <!-- 如果参数值是经过特殊处理的值 那么就需要继承该类自定义属性占位符处理对象 -->
-    <bean class="com.yang.hrms.util.MyPlaceholderConfigurer">
+    <bean class="com.sy.hotel.util.MyPlaceholderConfigurer">
         <property name="locations" value="classpath:jdbc.properties"/>
     </bean>
     <!-- 配置数据库连接池 -->
@@ -55,14 +55,14 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <!-- 配置类型别名 -->
-        <property name="typeAliasesPackage" value="com.yang.hrms.domain"/>
+        <property name="typeAliasesPackage" value="com.sy.hotel.domain"/>
         <!-- 配置映射器xml文件 -->
         <property name="mapperLocations" value="classpath*:mapper/*.xml"/>
         <!-- 配置mybatis的类型转换器 -->
-        <property name="typeHandlersPackage" value="com.yang.hrms.handler"/>
+        <property name="typeHandlersPackage" value="com.sy.hotel.handler"/>
     </bean>
     <!-- 配置mybatis的映射器，将包下的接口自动生成实现类并纳入Ioc容器的管理 -->
-    <mybatis:scan base-package="com.yang.hrms.mapper"/>
+    <mybatis:scan base-package="com.sy.hotel.mapper"/>
     <!-- 配置事务管理 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
@@ -100,7 +100,7 @@
     <bean class="org.apache.http.client.config.RequestConfig"
           factory-bean="requestConfigBuilder" factory-method="build" />
     <!-- 定期清理无效连接 -->
-    <bean class="com.yang.hrms.util.IdleConnectionEvictor">
+    <bean class="com.sy.hotel.util.IdleConnectionEvictor">
         <constructor-arg index="0" ref="poolingHttpClientConnectionManager"/>
     </bean>
 </beans>

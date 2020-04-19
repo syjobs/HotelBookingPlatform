@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预定平台-注册</title>
+    <title>HU酒店在线预订平台-注册</title>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -22,7 +22,7 @@
             <form class="form-horizontal" role="form" action="doAddRoom" method="post" id="doAddRoom"
                   enctype="multipart/form-data" accept-charset="UTF-8">
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">房间号</label>
+                    <label class="col-sm-2 control-label">房间名称</label>
                     <label id="isRoomNumValid"></label>
                     <div class="col-sm-10">
                         <input required type="text" class="form-control" name="roomNum" id="roomNum"/>

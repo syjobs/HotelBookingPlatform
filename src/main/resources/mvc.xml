@@ -24,23 +24,23 @@
             <mvc:exclude-mapping path="/user/doCheckCode"/>
             <mvc:exclude-mapping path="/user/toLogin"/>
             <mvc:exclude-mapping path="/user/doLogin"/>
-            <bean class="com.yang.hrms.interceptor.UserInterceptor" />
+            <bean class="com.sy.hotel.interceptor.UserInterceptor" />
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/admin/**" />
             <mvc:exclude-mapping path="/admin/toLogin"/>
             <mvc:exclude-mapping path="/admin/doLogin"/>
             <mvc:exclude-mapping path="/admin/doCheckCode"/>
-            <bean class="com.yang.hrms.interceptor.AdminInterceptor"/>
+            <bean class="com.sy.hotel.interceptor.AdminInterceptor"/>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/super/**"/>
-            <bean class="com.yang.hrms.interceptor.SuperInterceptor"/>
+            <bean class="com.sy.hotel.interceptor.SuperInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 
     <!-- 配置扫描控制器包 -->
-    <context:component-scan base-package="com.yang.hrms.controller"/>
+    <context:component-scan base-package="com.sy.hotel.controller"/>
 
     <!-- 配置注解驱动控制器配置 -->
     <mvc:annotation-driven conversion-service="conversionService">
@@ -61,7 +61,7 @@
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
             <set>
-                <bean class="com.yang.hrms.converter.StringToDateConverter"/>
+                <bean class="com.sy.hotel.converter.StringToDateConverter"/>
             </set>
         </property>
     </bean>

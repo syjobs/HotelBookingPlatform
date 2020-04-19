@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预定平台-查询预订订单</title>
+    <title>HU酒店在线预订平台-查询预订订单</title>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -33,9 +33,9 @@
                 </div>
             </form>
             <br/>
-            <a href="/admin/reservation/doShowAllReservation?flag=orderTime">按下单时间分页显示预定订单</a>
+            <a href="/admin/reservation/doShowAllReservation?flag=orderTime">按下单时间分页显示预订订单</a>
             &nbsp;&nbsp;
-            <a href="/admin/reservation/doShowAllReservation?flag=checkInTime">按入住时间分页显示预定订单</a>
+            <a href="/admin/reservation/doShowAllReservation?flag=checkInTime">按入住时间分页显示预订订单</a>
             <br/>
             <a href="/admin/toOperate">返回首页</a>
         </div>

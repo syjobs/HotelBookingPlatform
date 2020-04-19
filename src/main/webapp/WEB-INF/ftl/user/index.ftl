@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预定平台-首页</title>
+    <title>HU酒店在线预订平台-首页</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,13 +14,13 @@
                     <p>
                         <a href="/toIndex">首页</a>&nbsp;
 
-                        <a href="/user/room/showRoomByCatalog">预订客房</a>
+                        &nbsp;&nbsp;<a href="/user/room/showRoomByCatalog">预订房间</a>
                     </p>
                 </li>
                 <li class="dropdown pull-right">
                     <p>
                         <#if user!=null>
-                            欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">个人中心</a>
+                            欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">用户中心</a>
                             &nbsp;&nbsp;
                             <a href="/user/reservation/showByUser">我的订单</a>
                             &nbsp;&nbsp;
@@ -40,7 +40,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h1 class="text-center">
-                欢迎进入HU酒店在线预定平台
+                欢迎进入HU酒店在线预订平台
             </h1>
             <br/>
         </div>
@@ -109,7 +109,7 @@
                         活动标题
                     </th>
                     <th>
-                        活动内容<span style="color: red">（最新活动信息）</span>
+                        活动内容<span style="color: red">（最新促销信息）</span>
                     </th>
                     <th>
                         发布时间

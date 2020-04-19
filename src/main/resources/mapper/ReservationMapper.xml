@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 命名空间-对应相应的接口 -->
-<mapper namespace="com.yang.hrms.mapper.ReservationMapper">
+<mapper namespace="com.sy.hotel.mapper.ReservationMapper">
 
 	<resultMap id="userResultMap" type="user" >
 		<id property="id" column="user_id" />

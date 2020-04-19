@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预定平台-修改密码</title>
+    <title>HU酒店在线预订平台-修改密码</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,13 +14,13 @@
                     <p>
                         <a href="/toIndex">首页</a>&nbsp;
 
-                        <a href="/user/room/showRoomByCatalog">预订客房</a>
+                        &nbsp;&nbsp;<a href="/user/room/showRoomByCatalog">预订房间</a>
                     </p>
                 </li>
                 <li class="dropdown pull-right">
                     <p>
                         <#if user!=null>
-                            欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">个人中心</a>
+                            欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">用户中心</a>
                             &nbsp;&nbsp;
                             <a href="/user/reservation/showByUser">我的订单</a>
                             &nbsp;&nbsp;

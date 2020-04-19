@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预定平台-预订订单</title>
+    <title>HU酒店在线预订平台-预订订单</title>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -29,13 +29,13 @@
                         入住时间
                     </th>
                     <th>
-                        预定天数
+                        预订天数
                     </th>
                     <th>
                         入住人
                     </th>
                     <th>
-                        入住的房间号
+                        入住的房型
                     </th>
                     <th>
                         订单状态
