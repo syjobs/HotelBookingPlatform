@@ -8,19 +8,19 @@ import java.util.List;
 /**
  * @author sunyang
  * @date 2019/12/3
- * 床型类别数据持久层接口
+ * 房型数据持久层接口
  */
 public interface RoomInfoMapper {
 
     /**
-     * 保存某间床型类别
+     * 保存某间房型
      * @param roomInfo
      * @return
      */
     int save(RoomInfo roomInfo);
 
     /**
-     * 删除某间床型类别
+     * 删除某间房型
      * @param roomNum
      * @return
      */

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预订平台-床型类别</title>
+    <title>HU酒店在线预订平台-房型</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -10,7 +10,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">
-                以下是酒店类型<label style="color: red">${catalog.catalog}</label>的床型类别
+                以下是<label style="color: red">${catalog.catalog}</label>的房型
             </h3>
         </div>
     </div>

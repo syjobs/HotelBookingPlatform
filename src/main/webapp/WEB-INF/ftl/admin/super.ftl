@@ -24,7 +24,7 @@
                     <h4><a href="/super/user/all">前台用户管理</a></h4>
                 </li>
                 <li>
-                    <h4>床型类别管理</h4>
+                    <h4>房型类别管理</h4>
                     <a href="/super/room/toAddCatalog">添加床型</a>
                     <ul>
                         <#list catalogList as catalog>
