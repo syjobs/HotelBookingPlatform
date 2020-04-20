@@ -6,7 +6,7 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
+<div class="container" style="font-family: 微软雅黑;">
     <div class="row clearfix">
         <div class="col-md-12 column" style="margin-top: 15px;">
             <ul class="nav nav-pills">

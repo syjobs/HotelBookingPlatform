@@ -6,7 +6,7 @@
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
+<div class="container" style="font-family: 微软雅黑;">
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">

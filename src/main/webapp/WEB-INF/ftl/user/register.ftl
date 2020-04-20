@@ -6,12 +6,12 @@
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="font-family: 微软雅黑;">
         <div class="row clearfix">
             <div class="col-md-12 column">
-                <a href="/toIndex">进入首页</a>
-                <h3 class="text-center">
-                    HU酒店在线预订平台-注册用戶
+                <br/>
+                <h3 class="text-center" style="font-size: 26px;font-family: 微软雅黑;font-weight: bold;">
+                    欢迎注册HU酒店在线预订平台
                 </h3>
                 <br/>
                 <label style="color: red">${hint}</label>
@@ -20,32 +20,32 @@
         </div>
         <div class="row clearfix">
             <div class="col-md-12 column">
-                <form class="form-horizontal" role="form" action="doRegister" method="post" id="registerForm" enctype="multipart/form-data" accept-charset="UTF-8">
+                <form class="form-horizontal" role="form" action="doRegister" method="post" id="registerForm" enctype="multipart/form-data" accept-charset="UTF-8" style="margin-left: 350px;font-family: 微软雅黑;">
                     <div class="form-group">
                         <label class="col-sm-2 control-label">用户名</label>
                         <label id="isUsernameValid">（大小写字母开头；数字，字母，下划线混合6到18位）</label>
                         <div class="col-sm-10">
-                            <input required type="text" class="form-control" name="username" id="username" />
+                            <input required type="text" class="form-control" name="username" id="username" style="width: 399px;"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label  class="col-sm-2 control-label">密码</label>
                         <label id="isPasswordValid">（不能全是符号,或全是字母，或全是数字，8-32位组合）</label>
                         <div class="col-sm-10">
-                            <input required type="password" class="form-control" name="password" id="password" />
+                            <input required type="password" class="form-control" name="password" id="password" style="width: 399px;"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label  class="col-sm-2 control-label">重复密码</label>
                         <label id="isRePasswordValid"></label>
                         <div class="col-sm-10">
-                            <input required type="password" class="form-control" name="rePassword" id="rePassword" />
+                            <input required type="password" class="form-control" name="rePassword" id="rePassword" style="width: 399px;"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">真实姓名</label>
                         <div class="col-sm-10">
-                            <input required type="text" class="form-control" name="realName" id="realName" />
+                            <input required type="text" class="form-control" name="realName" id="realName" style="width: 399px;"/>
                         </div>
                     </div>
                     <div class="form-group">
@@ -57,15 +57,15 @@
                         <label  class="col-sm-2 control-label">邮箱</label>
                         <label id="isEmailValid"></label>
                         <div class="col-sm-10">
-                            <input required type="email" class="form-control" name="email" id="email" />
+                            <input required type="email" class="form-control" name="email" id="email" style="width: 399px;"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">电话号码</label>
                         <label id="isTelValid"></label>
                         <div class="col-sm-10">
-                            <input required type="number" class="form-control" name="phone" id="phone" />
-                            <button id="sendCode">发送验证码</button>
+                            <input required type="number" class="form-control" name="phone" id="phone" style="width: 399px;"/>
+                            <button id="sendCode" class="btn btn-sm btn-default">发送验证码</button>
                             <label id="sendStatus"></label>
                         </div>
                     </div>
@@ -73,17 +73,18 @@
                         <label class="col-sm-2 control-label">电话验证码</label>
                         <label id="isCodeValid"></label>
                         <div class="col-sm-10">
-                            <input  type="text" class="form-control" name="code" id="code" />
+                            <input  type="text" class="form-control" name="code" id="code" style="width: 399px;"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">上传头像</label>
-                        <input type="file" name="photo" id="photo" />
+                        <input type="file" name="photo" id="photo"  class="btn btn-sm btn-default" style="width: 399px;"/>
                     </div>
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" class="btn btn-default" value="注册"/>
+                            <input type="submit" class="btn btn-success" value="注册"/>
+                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a href="/toIndex">浏览首页</a>
                         </div>
                     </div>
                 </form>

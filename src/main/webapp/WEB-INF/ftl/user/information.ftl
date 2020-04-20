@@ -6,7 +6,7 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
+<div class="container" style="font-family: 微软雅黑;">
     <div class="row clearfix">
         <div class="col-md-12 column" style="margin-top: 15px;">
             <ul class="nav nav-pills">
@@ -43,9 +43,9 @@
         </div>
     </div>
     <br/><br/>
-    <div class="row clearfix">
+    <div class="row clearfix" style="margin-left: 280px;">
         <div class="col-md-6 column">
-            <img alt="140x140" src="/upload/user/${user.photoPath}" class="img-circle" style="height: 140px"/>
+            <img alt="110x110" src="/upload/user/${user.photoPath}" class="img-circle" style="height: 110px"/>
         </div>
         <div class="col-md-6 column">
             <a href="/user/toUpdateInfo">修改个人信息</a>
@@ -54,9 +54,9 @@
         </div>
     </div>
     <br/>
-    <div class="row clearfix">
+    <div class="row clearfix" style="margin-left: 280px;">
         <div class="col-md-12 column">
-            <table class="table table-bordered">
+            <table class="table table-bordered" style="width: 600px;">
                 <tbody>
                 <tr>
                     <td>
@@ -64,22 +64,6 @@
                     </td>
                     <td>
                         ${user.username}
-                    </td>
-                </tr>
-                <tr class="success">
-                    <td>
-                        邮箱：
-                    </td>
-                    <td>
-                        ${user.email}
-                    </td>
-                </tr>
-                <tr class="error">
-                    <td>
-                        电话号码：
-                    </td>
-                    <td>
-                         ${user.phone}
                     </td>
                 </tr>
                 <tr class="warning">
@@ -92,10 +76,26 @@
                 </tr>
                 <tr class="info">
                     <td>
-                       性别：
+                        性别：
                     </td>
                     <td>
                         ${user.gender}
+                    </td>
+                </tr>
+                <tr class="error">
+                    <td>
+                        电话号码：
+                    </td>
+                    <td>
+                        ${user.phone}
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td>
+                        邮箱：
+                    </td>
+                    <td>
+                        ${user.email}
                     </td>
                 </tr>
                 </tbody>

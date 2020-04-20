@@ -6,7 +6,7 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
+<div class="container" style="font-family: 微软雅黑;">
     <div class="row clearfix">
         <div class="col-md-12 column" style="margin-top: 15px;">
             <ul class="nav nav-pills">
@@ -20,15 +20,15 @@
                 <li class="dropdown pull-right">
                     <p>
                         <#if user!=null>
-                            欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">用户中心</a>
+                            欢迎${user.realName}&nbsp;&nbsp;<a href="/user/toInformation">用户中心</a> |
                             &nbsp;&nbsp;
-                            <a href="/user/reservation/showByUser">我的订单</a>
+                            <a href="/user/reservation/showByUser">我的订单</a> |
                             &nbsp;&nbsp;
                             <a href="/user/doLogout">退出</a>
                         <#else>
-                            <a href="/user/toLogin">登录</a>
+                            <a href="/user/toLogin">登录</a> |
                             &nbsp;&nbsp;
-                            <a href="/user/toRegister">注册</a>
+                            <a href="/user/toRegister">注册</a> |
                         </#if>
 
                         &nbsp;&nbsp;<a href="/admin/toLogin">进入后台</a>
@@ -39,10 +39,9 @@
     </div>
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <h1 class="text-center">
+            <h1 class="text-center" style="font-size: 26px;font-family: 微软雅黑;font-weight: bold;">
                 欢迎进入HU酒店在线预订平台
             </h1>
-            <br/>
         </div>
     </div>
 <#--    <div class="row clearfix">-->
