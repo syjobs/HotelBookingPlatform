@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <input required type="submit" value="登陆" class="btn btn-success"/>
+                        <input required type="submit" value="登录" class="btn btn-success"/>
                         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<a href="/toIndex">浏览首页</a>
                     </div>
                 </div>

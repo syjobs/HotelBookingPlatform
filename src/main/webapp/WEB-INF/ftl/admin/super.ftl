@@ -25,7 +25,7 @@
                 </li>
                 <li>
                     <h4>房型类别管理</h4>
-                    <a href="/super/room/toAddCatalog">添加床型</a>
+                    <a href="/super/room/toAddCatalog">添加房型类别</a>
                     <ul>
                         <#list catalogList as catalog>
                             <li id="li${catalog.id}">
@@ -36,7 +36,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/super/promotion/doShowPromotion">活动发布管理</a>
+                    <a href="/super/promotion/doShowPromotion">促销信息管理</a>
                 </li>
             </ul>
         </div>

@@ -94,7 +94,7 @@
 <#--    <div class="row clearfix">-->
 <#--        <div class="col-md-12 column">-->
 <#--            <h3 class="text-center">-->
-<#--                最新活动消息-->
+<#--                最新促销信息消息-->
 <#--            </h3>-->
 <#--            <br/>-->
 <#--        </div>-->

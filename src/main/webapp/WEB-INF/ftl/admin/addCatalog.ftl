@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预订平台-添加酒店</title>
+    <title>HU酒店在线预订平台-添加房型类别</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -10,7 +10,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">
-                添加酒店
+                添加房型类别
             </h3>
             <br/>
             <label style="color: red">${hint}</label>
@@ -21,7 +21,7 @@
         <div class="col-md-12 column">
             <form role="form" action="/super/room/doAddCatalog" method="post">
                 <div class="form-group">
-                    <label>酒店名称</label>
+                    <label>房型类别</label>
                     <input type="text" class="form-control" name="catalog" required/>
                 </div>
                 <button type="submit" class="btn btn-default">添加</button>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预订平台-酒店最新活动</title>
+    <title>HU酒店在线预订平台-酒店最新促销信息</title>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -10,7 +10,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h3 class="text-center">
-                酒店最新活动
+                酒店最新促销信息
             </h3>
         </div>
     </div>
@@ -53,7 +53,7 @@
                 </#list>
                 </tbody>
             </table>
-            <a href="/super/promotion/toAddPromotion">添加新活动</a>
+            <a href="/super/promotion/toAddPromotion">添加促销信息</a>
             <a href="/super/toSuper">返回上一页</a>
         </div>
     </div>
@@ -61,7 +61,7 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 function deletePromotion(id) {
-    if (confirm('确定删除该活动内容？')){
+    if (confirm('确定删除该促销信息内容？')){
         $.getJSON("deletePromotion?promotionId="+id,function (data) {
             if(data){
                 $('#tr'+id).remove();

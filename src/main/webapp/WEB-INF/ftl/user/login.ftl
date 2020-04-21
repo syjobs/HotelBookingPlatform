@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预订平台-登陆</title>
+    <title>HU酒店在线预订平台-登录</title>
     <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <input required type="submit" value="登陆" class="btn btn-success"/>
+                        <input required type="submit" value="登录" class="btn btn-success"/>
                         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a href="/toIndex">浏览首页</a>
                     </div>
                     <div class="col-sm-offset-2 col-sm-10">

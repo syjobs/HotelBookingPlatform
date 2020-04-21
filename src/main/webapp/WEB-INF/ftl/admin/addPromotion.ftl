@@ -21,13 +21,13 @@
         <div class="col-md-12 column">
             <form class="form-horizontal" role="form" action="/super/promotion/doAddPromotion" method="post" accept-charset="UTF-8">
                 <div class="form-group">
-                    <label class="col-sm-2 control-label">活动主题</label>
+                    <label class="col-sm-2 control-label">促销信息主题</label>
                     <div class="col-sm-10">
                         <input required type="text" class="form-control" name="title"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label  class="col-sm-2 control-label">活动内容</label>
+                    <label  class="col-sm-2 control-label">促销信息内容</label>
                     <div class="col-sm-10">
                         <input required type="text" class="form-control" name="content" />
                     </div>

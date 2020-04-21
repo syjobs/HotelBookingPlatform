@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * @author sunyang
  * @date 2019/12/4
- * 酒店搞活动的公告
+ * 酒店搞促销信息的公告
  */
 public class Promotion implements Serializable{
     //主键id
