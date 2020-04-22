@@ -12,7 +12,7 @@
 
 	<resultMap id="roomInfoResultMap" type="roomInfo">
 		<id property="id" column="room_info_id"/>
-		<result property="roomNum" column="room_num"/>
+		<result property="roomNum" column="room_name"/>
 		<result property="price" column="price"/>
 		<result property="version" column="version"/>
 	</resultMap>
@@ -41,7 +41,7 @@
 	
 	<select id="findById" resultMap="reservationResultMap" parameterType="int">
 		select reservation_id,r.status,order_time,days,check_in_time,check_in_name,check_in_phone,i.room_info_id,u.user_id,u.username,u.realname,
-			i.room_num,i.price,i.version
+			i.room_name,i.price,i.version
 		from tb_reservation as r
 		left outer join tb_user as u
 			on r.user_id=u.user_id
@@ -52,7 +52,7 @@
 
 	<select id="findByUserId" resultMap="reservationResultMap">
 		select reservation_id,r.status,order_time,days,check_in_time,check_in_name,check_in_phone,i.room_info_id,u.user_id,u.username,u.realname,
-			i.room_num,i.price,i.version
+			i.room_name,i.price,i.version
 		from tb_reservation as r
 		left outer join tb_user as u
 			on r.user_id=u.user_id
@@ -68,7 +68,7 @@
 
 	<select id="selectListByOrderTime" resultMap="reservationResultMap">
 		select reservation_id,r.status,order_time,days,check_in_time,check_in_name,check_in_phone,i.room_info_id,u.user_id,u.username,u.realname,
-		i.room_num,i.price,i.version
+		i.room_name,i.price,i.version
 		from tb_reservation as r
 		left outer join tb_user as u
 		on r.user_id=u.user_id
@@ -80,7 +80,7 @@
 
 	<select id="selectListByCheckInTime" resultMap="reservationResultMap">
 		select reservation_id,r.status,order_time,days,check_in_time,check_in_name,check_in_phone,i.room_info_id,u.user_id,u.username,u.realname,
-		i.room_num,i.price,i.version
+		i.room_name,i.price,i.version
 		from tb_reservation as r
 		left outer join tb_user as u
 		on r.user_id=u.user_id

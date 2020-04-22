@@ -6,7 +6,7 @@
 
 	<resultMap id="roomInfoResultMap" type="roomInfo">
 		<id property="id" column="room_info_id"/>
-		<result property="roomNum" column="room_num"/>
+		<result property="roomNum" column="room_name"/>
 	</resultMap>
 
 	<resultMap id="userResultMap" type="user" >
@@ -36,7 +36,7 @@
 	</delete>
 
 	<select id="listByUserId" resultMap="commentResultMap" parameterType="int">
-		select c.comment_id, c.content, c.pub_date, r.room_info_id, r.room_num, u.user_id, u.username, u.photo_path
+		select c.comment_id, c.content, c.pub_date, r.room_info_id, r.room_name, u.user_id, u.username, u.photo_path
 		from tb_comment as c
 		left outer join tb_user as u on c.user_id=u.user_id
 		left outer join tb_room_info as r on c.room_info_id=r.room_info_id
@@ -44,7 +44,7 @@
 	</select>
 
 	<select id="listByRoomInfoId" resultMap="commentResultMap">
-		select c.comment_id,c.content,c.pub_date,r.room_info_id,r.room_num,u.user_id,u.username,u.photo_path
+		select c.comment_id,c.content,c.pub_date,r.room_info_id,r.room_name,u.user_id,u.username,u.photo_path
 		from tb_comment as c
 		left outer join tb_user as u on c.user_id=u.user_id
 		left outer join tb_room_info as r on c.room_info_id=r.room_info_id
@@ -59,7 +59,7 @@
 	</select>
 
 	<select id="pageByRoomInfoId" resultMap="commentResultMap">
-		select c.comment_id,c.content,c.pub_date,r.room_info_id,r.room_num,u.user_id,u.username,u.photo_path
+		select c.comment_id,c.content,c.pub_date,r.room_info_id,r.room_name,u.user_id,u.username,u.photo_path
 		from tb_comment as c
 		left outer join tb_user as u on c.user_id=u.user_id
 		left outer join tb_room_info as r on c.room_info_id=r.room_info_id

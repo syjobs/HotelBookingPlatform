@@ -45,7 +45,7 @@ CREATE TABLE `tb_room_catalog` (
 DROP TABLE IF EXISTS `tb_room_info`;
 CREATE TABLE `tb_room_info` (
   `room_info_id` int(11) NOT NULL AUTO_INCREMENT,
-  `room_num` varchar(32) NOT NULL,
+  `room_name` varchar(32) NOT NULL,
   `area` int(11) NOT NULL,
   `photo_path` varchar(255) NOT NULL,
   `intro` varchar(255) NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE `tb_room_info` (
   `status` tinyint(4) NOT NULL DEFAULT '0',
   `version` bigint(20) DEFAULT '1',
   PRIMARY KEY (`room_info_id`),
-  UNIQUE KEY `room_num` (`room_num`),
+  UNIQUE KEY `room_name` (`room_name`),
   KEY `room_info_catalog_fk` (`room_catalog_id`),
   CONSTRAINT `room_info_catalog_fk` FOREIGN KEY (`room_catalog_id`) REFERENCES `tb_room_catalog` (`room_catalog_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

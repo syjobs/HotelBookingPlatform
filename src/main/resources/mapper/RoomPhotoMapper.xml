@@ -6,7 +6,7 @@
 
 	<resultMap id="roomInfoResultMap" type="roomInfo">
 		<id property="id" column="room_info_id"/>
-		<result property="roomNum" column="room_num"/>
+		<result property="roomNum" column="room_name"/>
 	</resultMap>
 	
 	<!-- 配置实体类与数据库表的对应关系 -->
@@ -33,7 +33,7 @@
 	</delete>
 
 	<select id="listByRoomInfoId" resultMap="roomPhotoResultMap" parameterType="int">
-		select p.room_photo_id,p.photo_path,i.room_info_id,i.room_num
+		select p.room_photo_id,p.photo_path,i.room_info_id,i.room_name
 		from tb_room_info as i
 		left outer join tb_room_photo as p
 			on i.room_info_id=p.room_info_id

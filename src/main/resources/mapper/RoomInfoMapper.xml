@@ -12,7 +12,7 @@
 
 	<resultMap id="roomInfoResultMap" type="roomInfo">
 		<id property="id" column="room_info_id"/>
-		<result property="roomNum" column="room_num"/>
+		<result property="roomNum" column="room_name"/>
 		<result property="area" column="area"/>
 		<result property="primaryPhoto" column="photo_path"/>
 		<result property="intro" column="intro"/>
@@ -24,19 +24,19 @@
 
 	<!-- 主键回显 -->
 	<insert id="save" parameterType="roomInfo" useGeneratedKeys="true" keyProperty="id">
-		insert into tb_room_info (room_num,area,photo_path,intro,price,room_catalog_id,status)
+		insert into tb_room_info (room_name,area,photo_path,intro,price,room_catalog_id,status)
 		values(#{roomNum},#{area},#{primaryPhoto},#{intro},#{price},#{roomCatalog.id},#{roomStatus})
 	</insert>
 
 	<delete id="deleteByRoomNum" parameterType="java.lang.String">
 		delete from tb_room_info
-		where room_num=#{roomNum} and status=0
+		where room_name=#{roomNum} and status=0
 	</delete>
 
 	<update id="update" parameterType="roomInfo">
 		update tb_room_info
 		<set>
-			<if test="roomNum!=null">room_num=#{roomNum},</if>
+			<if test="roomNum!=null">room_name=#{roomNum},</if>
 			<if test="area!=null">area=#{area},</if>
 			<if test="primaryPhoto!=null">photo_path=#{primaryPhoto},</if>
 			<if test="intro!=null">intro=#{intro},</if>
@@ -54,11 +54,11 @@
 	</update>
 
 	<select id="selectByNum" resultMap="roomInfoResultMap" parameterType="java.lang.String">
-		select room_info_id,room_num,area,photo_path,intro,price,status,version,c.room_catalog_id,c.catalog
+		select room_info_id,room_name,area,photo_path,intro,price,status,version,c.room_catalog_id,c.catalog
 		from tb_room_info as i
 		left outer join tb_room_catalog as c
 			on i.room_catalog_id=c.room_catalog_id
-		where room_num=#{num}
+		where room_name=#{num}
 	</select>
 
 	<select id="count" resultType="_int">
@@ -67,9 +67,9 @@
 	</select>
 
 	<select id="page" resultMap="roomInfoResultMap">
-		select room_info_id,room_num,area,photo_path,intro,price,status,version,room_catalog_id
+		select room_info_id,room_name,area,photo_path,intro,price,status,version,room_catalog_id
 		from tb_room_info
-		order by room_num
+		order by room_name
 		limit #{offset},#{pageSize};
 	</select>
 
@@ -80,15 +80,15 @@
 	</select>
 
 	<select id="pageByRoomCatalogId" resultMap="roomInfoResultMap">
-		select room_info_id,room_num,area,photo_path,intro,price,status,version,room_catalog_id
+		select room_info_id,room_name,area,photo_path,intro,price,status,version,room_catalog_id
 		from tb_room_info
 		where room_catalog_id=#{roomCatalogId}
-		order by room_num
+		order by room_name
 		limit #{offset},#{pageSize};
 	</select>
 
 	<select id="getByVersion" resultMap="roomInfoResultMap">
-		select room_info_id,room_num,area,photo_path,intro,price,status,version,room_catalog_id
+		select room_info_id,room_name,area,photo_path,intro,price,status,version,room_catalog_id
 		from tb_room_info
 		order by version desc
 		limit 0,6;
