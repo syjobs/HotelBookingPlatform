@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预订平台-填写订单信息</title>
+    <title>HNU酒店在线预订平台-填写订单信息</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -37,7 +37,7 @@
     </div>
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <h3 class="text-center">
+            <h3 class="text-center" style="font-family: 微软雅黑;">
                 填写您的预订信息
             </h3>
             <br/>
@@ -46,25 +46,25 @@
     </div>
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <form role="form" action="/user/reservation/addByUser" method="post">
+            <form role="form" action="/user/reservation/addByUser" method="post" style="margin-left: 359px;">
                 <div class="form-group">
                     <input type="hidden" name="roomNum" value="${roomNum}"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">预订天数</label>
-                    <input type="number" class="form-control" name="days" required />
+                    <input type="number" class="form-control" name="days" required style="width: 410px;"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">入住时间</label>
-                    <input type="datetime-local" class="form-control" name="checkInTime" required />
+                    <input type="datetime-local" class="form-control" name="checkInTime" style="width: 410px;" required />
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">入住人姓名</label>
-                    <input type="text" class="form-control" required name="checkInName" />
+                    <input type="text" class="form-control" required name="checkInName" style="width: 410px;"/>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">联系电话</label>
-                    <input type="number" class="form-control" name="checkInPhone" required />
+                    <input type="number" class="form-control" name="checkInPhone" style="width: 410px;" required />
                 </div>
                 <button type="submit" class="btn btn-default">预订</button>
                 &nbsp;&nbsp;

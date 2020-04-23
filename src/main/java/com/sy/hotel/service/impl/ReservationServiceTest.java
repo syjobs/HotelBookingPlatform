@@ -42,7 +42,7 @@ public class ReservationServiceTest implements ReservationService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public boolean saveReservation(Reservation reservation) {
-        //订单状态：预订成功 -- 房型状态：已被预订
+        //订单状态：预订成功，房型状态：已被预订
         reservation.setReservationStatus(ReservationStatus.ORDERED);
         RoomInfo room = reservation.getRoomInfo();
         room.setRoomStatus(RoomStatus.BLOCKS);

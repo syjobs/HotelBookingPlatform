@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预订平台-${userRealName}个人信息</title>
+    <title>HNU酒店在线预订平台-${userRealName}个人信息</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -102,7 +102,7 @@
             </table>
         </div>
     </div>
-    <a href="/toIndex">返回首页</a>
+<#--    <a href="/toIndex">返回首页</a>-->
 </div>
 </body>
 </html>

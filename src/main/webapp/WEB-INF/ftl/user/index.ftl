@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HU酒店在线预订平台-首页</title>
+    <title>HNU酒店在线预订平台-首页</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -40,7 +40,7 @@
     <div class="row clearfix">
         <div class="col-md-12 column">
             <h1 class="text-center" style="font-size: 26px;font-family: 微软雅黑;font-weight: bold;">
-                欢迎进入HU酒店在线预订平台
+                欢迎进入HNU酒店在线预订平台
             </h1>
         </div>
     </div>

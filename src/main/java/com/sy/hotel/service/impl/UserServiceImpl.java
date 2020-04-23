@@ -28,11 +28,9 @@ public class UserServiceImpl implements UserService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public boolean register(UserRegisterDto userRegisterDto) {
-        boolean flag = false;
         User temp = userMapper.findByUsername(userRegisterDto.getUsername());
-        if (temp == null
-                && userRegisterDto.getPassword() != null
-                && userRegisterDto.getRePassword() != null
+        if (null == temp && StringUtils.isEmpty(userRegisterDto.getPassword())
+                && StringUtils.isEmpty(userRegisterDto.getRePassword())
                 && userRegisterDto.getRePassword().equals(userRegisterDto.getPassword())) {
             String md5 = DigestUtils.md5Hex(userRegisterDto.getPassword());
             User user = new User(
@@ -42,12 +40,11 @@ public class UserServiceImpl implements UserService {
                     userRegisterDto.getPhone(),
                     userRegisterDto.getRealName(),
                     userRegisterDto.getGender(),
-                    userRegisterDto.getPhotoPath()
-            );
+                    userRegisterDto.getPhotoPath());
             user.setStatus(1);
-            flag = userMapper.save(user) == 1;
+            return userMapper.save(user) == 1;
         }
-        return flag;
+        return false;
     }
 
     @Override
